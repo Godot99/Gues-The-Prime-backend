@@ -2,6 +2,8 @@
 'use strict';
 
 require('dotenv').config();
+
+const port = process.env.PORT;
 const bodyParser = require('body-parser');
 const express = require('express');
 const cors = require('cors');
@@ -48,7 +50,7 @@ async function init() {
     process.exit(1);
   }
 
-  const port = process.env.PORT;
+
   app.listen(port, () => {
     console.log(`Server running and listening on port ${port}`);
   });
