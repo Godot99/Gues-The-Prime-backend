@@ -3,12 +3,13 @@
 
 require('dotenv').config();
 
-const port = process.env.PORT;
 const bodyParser = require('body-parser');
 const express = require('express');
 const cors = require('cors');
 const routers = require('./webserver/routes');
 const mongoPool = require('./databases/mongo-pool');
+
+const port = process.env.PORT;
 
 
 const app = express();
